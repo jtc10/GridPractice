@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+}
+
+.main-content {
+  display: grid;
+  /*sets grid container*/
+  max-width: 90%;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* sets grid column track,
+  -minmax(min, max) -- sets the min and max of a grid cell
+  -auto-fill-- fit as many columns into the container without overflowing boundry
+  -auto-fit-- collapses empty tracks meaning no empty space*/
+  grid-template-rows: repeat(3, 200px);
+  /* sets grid row track */
+  grid-auto-rows: ;
+  /*controls size of implicit row tracks*/
+  grid-auto-columns: ;
+  /*controls size of implicit row columns*/
+  grid-auto-flow: :/*controls if implicit items become a row or column value row/column*/
+  grid-gap: 10px;
+  /*grid-column-gap, grid-row-gap, grid-gap: row column*/
+}
+
+.box {
+  border: 1px solid black;
+}
+
+.box:nth-child(odd) {
+  background-color: lightgray;
+}
+
+#box1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-column: ;
+  /* value is start/end */
+}
+
+#box8 {
+  grid-column: 3 / 4;
+  grid-row: 2 / 4;
+}
+
+#box7 {
+  grid-column: 1 / -1;
+}
