@@ -3,37 +3,63 @@
 }
 .main-content {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 200px 200px 200px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 200px;
   grid-auto-rows: 200px;
-  grid-gap: 10px;
+  grid-row-gap: 10px;
   grid-template-areas:
-        "box1 box1 box2"
-        "box3 box4 box5"
-        "box6 box6 box5";
+        "box1"
+        "box2"
+        "box3"
+        "box4"
+        "box5"
+        "box6";
 }
 .box {
-  border: 1px solid black;
+  /*border: 1px solid black;*/
 }
 
-.box:nth-child(odd) {
-  background-color: lightgray;
-}
 #box1 {
   grid-area: box1;
+  background: url('images/assorted-fruit.jpeg') no-repeat center center;
+  background-size: cover;
 }
 #box2 {
   grid-area: box2;
+  background: url('images/orange.jpeg') no-repeat center center;
+  background-size: cover;
 }
 #box3 {
   grid-area: box3;
+  background: url('images/strawberry.jpeg') no-repeat center center;
+  background-size: cover;
 }
 #box4 {
   grid-area: box4;
+  background: url('images/pepper.jpeg') no-repeat center center;
+  background-size: cover;
 }
 #box5 {
   grid-area: box5;
+  background: url('images/radish.jpeg') no-repeat center center;
+  background-size: cover;
 }
 #box6 {
   grid-area: box6;
+  background: url('images/assorted-vegetables.jpeg') no-repeat center center;
+  background-size: cover;
+}
+
+@media screen and (min-width: 550px) {
+  .main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 200px 200px 200px;
+    grid-auto-rows: 200px;
+    grid-gap: 10px;
+    grid-template-areas:
+          "box1 box1 box2"
+          "box3 box4 box5"
+          "box6 box6 box5";
+  }
 }
